@@ -6,15 +6,21 @@ import FeaturedMovie from '@/components/FeaturedMovie';
 import { Ring } from '@uiball/loaders'
 import Footer from '@/components/Footer';
 
+interface Movie {
+  slug: string;
+  title: string;
+  items: any;
+}
+
 const ListMovies = () => {
   
-  const [movieList, setMovieList] = useState([]);
-  const [featureData, setFeatureData] = useState(null);
+  const [movieList, setMovieList] = useState<Movie[]>([]);
+  const [featureData, setFeatureData] = useState<any>(null); // Tipo any para featureData por enquanto, pode ser ajustado conforme necessário
 
   useEffect(() => {
     const loadAll = async () => {
       // take list
-      let list = await Tmdb.getHomeList();
+      let list: Movie[] = await Tmdb.getHomeList(); // Assumindo que getHomeList retorna um array de Movie
       setMovieList(list);
 
       // take feature
