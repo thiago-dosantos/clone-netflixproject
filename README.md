@@ -7,3 +7,4 @@ This project aims to exercise my React skills by creating a clone of the Netflix
 ## Credits
 
 Some code structures were based on and inspired by codes written and taught by developer Bonieky, from the Bonieky Lacerda channel on YouTube (https://www.youtube.com/@bonieky).
+All image rights reserved to Netflix
