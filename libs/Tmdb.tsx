@@ -1,11 +1,6 @@
 const API_KEY = 'a4199a8603d5accdee9b726f7047de27';
 const API_BASE = 'https://api.themoviedb.org/3';
 
-// netflix originals
-// trending
-// top rated
-// category
-
 const basicFetch = async (endpoint:string) => {
     const req = await fetch(`${API_BASE}${endpoint}`);
     const json = await req.json();
@@ -58,21 +53,21 @@ export default {
         ];
 
     },
-    getMovieInfo: async (movieId, type) => {
-        let info ={};
+    getMovieInfo: async (movieId: number, type: string) => { 
+        let info: any = {};
 
-        if(movieId){
-            switch(type) {
+        if (movieId) {
+            switch (type) {
                 case 'movie':
                     info = await basicFetch(`/movie/${movieId}?api_key=${API_KEY}`);
-                break;
+                    break;
 
                 case 'tv':
                     info = await basicFetch(`/tv/${movieId}?api_key=${API_KEY}`);
-                break;
+                    break;
                 default:
                     info = null;
-                break;
+                    break;
             }
         }
 

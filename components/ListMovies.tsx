@@ -15,12 +15,12 @@ interface Movie {
 const ListMovies = () => {
   
   const [movieList, setMovieList] = useState<Movie[]>([]);
-  const [featureData, setFeatureData] = useState<any>(null); // Tipo any para featureData por enquanto, pode ser ajustado conforme necessário
+  const [featureData, setFeatureData] = useState<any>(null); 
 
   useEffect(() => {
     const loadAll = async () => {
       // take list
-      let list: Movie[] = await Tmdb.getHomeList(); // Assumindo que getHomeList retorna um array de Movie
+      let list: Movie[] = await Tmdb.getHomeList();
       setMovieList(list);
 
       // take feature

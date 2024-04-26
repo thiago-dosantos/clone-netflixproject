@@ -8,8 +8,8 @@ interface MovieItem {
     original_name: string;
     vote_average: number;
     number_of_seasons: number;
-    id: string; // Adicione outras propriedades se necessário
-    // Adicione outras propriedades se necessário
+    id: string; 
+    
 }
 const FeaturedMovie = ({ item }: { item: MovieItem }) => {
     let firstDate = new Date(item.first_air_date);
