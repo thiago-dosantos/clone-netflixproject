@@ -4,8 +4,6 @@ This project aims to exercise my React skills by creating a clone of the Netflix
 
 [Click on link bellow for live preview.](https://thiago-cloneflixproject.netlify.app/)
 
-<a href="https://thiago-cloneflixproject.netlify.app/" target="_blank">Netflix Clone Project</a>
-
 ![Netflix Clone Preview](https://github.com/thiago-dosantos/clone-netflixproject/blob/main/public/Images/cloneflix.png)
 
 ## Credits
